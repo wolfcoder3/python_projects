@@ -1,3 +1,5 @@
+# monitor_server.py
+
 from fastapi import FastAPI
 from datetime import datetime, timedelta
 import threading
@@ -6,8 +8,8 @@ import requests
 app = FastAPI()
 last_ping = datetime.utcnow()
 
-TELEGRAM_TOKEN = "5746897470:AAG8MxzDzsqRKj4XsWkxXRj5LBtvu661t6w"
-TELEGRAM_CHAT_ID = "-1001967474585"
+TELEGRAM_TOKEN = "<your_bot_token>"
+TELEGRAM_CHAT_ID = "<your_chat_id>"
 
 def check_health():
     global last_ping
