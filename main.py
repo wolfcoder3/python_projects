@@ -10,6 +10,11 @@ last_ping = datetime.utcnow()
 TELEGRAM_TOKEN = "YOUR_TOKEN"
 CHAT_ID = "YOUR_CHAT_ID"
 
+
+@app.get("/")
+def home():
+    return {"status": "monitor running"}
+    
 @app.post("/heartbeat")
 def heartbeat():
     global last_ping
