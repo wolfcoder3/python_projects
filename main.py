@@ -7,9 +7,10 @@ import time
 app = FastAPI()
 last_ping = datetime.utcnow()
 
-TELEGRAM_TOKEN = "YOUR_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
+import os
 
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 @app.get("/")
 def home():
